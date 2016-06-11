@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{03F7B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HampageClient", "HampageClient\HampageClient.csproj", "{EDF1761A-44A0-4D77-899D-859ECA576ED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HampageClientTests", "HampageClientTests\HampageClientTests.csproj", "{764D5983-78E7-4D8C-B650-C85067E9E955}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764D5983-78E7-4D8C-B650-C85067E9E955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764D5983-78E7-4D8C-B650-C85067E9E955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764D5983-78E7-4D8C-B650-C85067E9E955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764D5983-78E7-4D8C-B650-C85067E9E955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +54,6 @@ Global
 		{9B010BD6-DA85-4C18-9659-803122E253F3} = {53278048-2C6F-4A22-B49A-F29AB60BF817}
 		{7110E630-369E-46AB-9938-C4E9561BC157} = {E3EDBA5C-7ACD-48C3-B88E-2A0BCFACC6FB}
 		{EDF1761A-44A0-4D77-899D-859ECA576ED3} = {03F7B11A-8050-4597-8E41-A8CBC7116442}
+		{764D5983-78E7-4D8C-B650-C85067E9E955} = {03F7B11A-8050-4597-8E41-A8CBC7116442}
 	EndGlobalSection
 EndGlobal
