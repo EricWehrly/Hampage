@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using DisruptoLib.Factories;
 
-namespace CoOpTowerDefense.Requests
+namespace Hampage.Requests
 {
     public class GetPlayerList : NancyModule
     {

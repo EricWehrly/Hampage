@@ -1,6 +1,6 @@
 ﻿using Nancy;
 
-namespace CoOpTowerDefense.Requests
+namespace Hampage.Requests
 {
     public class Scripts : NancyModule
     {

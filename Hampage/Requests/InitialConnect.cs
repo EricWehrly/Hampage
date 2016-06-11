@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using DisruptoLib;
 using DisruptoLib.Factories;
 
-namespace CoOpTowerDefense.Requests
+namespace Hampage.Requests
 {
     public class InitialConnect : NancyModule
     {

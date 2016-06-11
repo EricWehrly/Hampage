@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hampage", "Hampage\Hampage.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisruptoLib", "DisruptoLib\DisruptoLib.csproj", "{9B010BD6-DA85-4C18-9659-803122E253F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTests", "ServerTests\ServerTests.csproj", "{7110E630-369E-46AB-9938-C4E9561BC157}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E3EDBA5C-7ACD-48C3-B88E-2A0BCFACC6FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{53278048-2C6F-4A22-B49A-F29AB60BF817}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{03F7B11A-8050-4597-8E41-A8CBC7116442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HampageClient", "HampageClient\HampageClient.csproj", "{EDF1761A-44A0-4D77-899D-859ECA576ED3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +31,22 @@ Global
 		{9B010BD6-DA85-4C18-9659-803122E253F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B010BD6-DA85-4C18-9659-803122E253F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B010BD6-DA85-4C18-9659-803122E253F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7110E630-369E-46AB-9938-C4E9561BC157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7110E630-369E-46AB-9938-C4E9561BC157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7110E630-369E-46AB-9938-C4E9561BC157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7110E630-369E-46AB-9938-C4E9561BC157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF1761A-44A0-4D77-899D-859ECA576ED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4EB26E94-F5D3-46C7-AE1F-9E6B823860D6} = {E3EDBA5C-7ACD-48C3-B88E-2A0BCFACC6FB}
+		{9B010BD6-DA85-4C18-9659-803122E253F3} = {53278048-2C6F-4A22-B49A-F29AB60BF817}
+		{7110E630-369E-46AB-9938-C4E9561BC157} = {E3EDBA5C-7ACD-48C3-B88E-2A0BCFACC6FB}
+		{EDF1761A-44A0-4D77-899D-859ECA576ED3} = {03F7B11A-8050-4597-8E41-A8CBC7116442}
 	EndGlobalSection
 EndGlobal
