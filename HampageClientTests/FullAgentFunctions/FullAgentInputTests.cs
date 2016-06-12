@@ -16,7 +16,7 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void PressingWMovesLocalPlayerUp()
         {
-            _localPlayer.Position = new Point(0, 10);
+            _localPlayer.Value.Position = new Point(0, 10);
 
             var keyCode = 87;
 
@@ -30,7 +30,7 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void KeepingAPressedContinuesMovingPlayerLeft()
         {
-            _localPlayer.Position = new Point(5, 0);
+            _localPlayer.Value.Position = new Point(5, 0);
 
             var keyCode = 65;
 
@@ -47,7 +47,7 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void ReleasingSStopsMovingDown()
         {
-            _localPlayer.Position = new Point(5, 10);
+            _localPlayer.Value.Position = new Point(5, 10);
 
             var keyCode = 83;
 
@@ -65,7 +65,7 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void PlayerMovesFromZeroPosition()
         {
-            _localPlayer.Position = new Point(0, 0);
+            _localPlayer.Value.Position = new Point(0, 0);
 
             var keyCode = 68;
 
@@ -81,21 +81,21 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void WillStopWhenReachingDestination()
         {
-            _localPlayer.Position = new Point(17, 17);
+            _localPlayer.Value.Position = new Point(17, 17);
 
-            _localPlayer.Destination = new Point(17, 17);
+            _localPlayer.Value.Destination = new Point(17, 17);
 
             HeartBeat.PhysicsLoop();
 
-            _localPlayer.Position.X.Should().Be(17);
+            _localPlayer.Value.Position.X.Should().Be(17);
 
-            _localPlayer.Position.Y.Should().Be(17);
+            _localPlayer.Value.Position.Y.Should().Be(17);
         }
 
         [Test]
         public void PlayerCantMoveToNegativeSpace()
         {
-            _localPlayer.Position = new Point(0, 0);
+            _localPlayer.Value.Position = new Point(0, 0);
 
             var keyCode = 65;
 
@@ -109,19 +109,19 @@ namespace HampageClientTests.FullAgentFunctions
         [Test]
         public void PlayerClicksMouseInFrontOfPlayer()
         {
-            _localPlayer.Position = new Point(5, 5);
+            _localPlayer.Value.Position = new Point(5, 5);
 
             var x = 10 * TestTileWidth;
 
             PlayerInput.ProcessPlayerMouseInput(0, x, 0, true);
 
-            _localPlayer.Destination.X.Should().Be(10);
+            _localPlayer.Value.Destination.X.Should().Be(10);
         }
 
         [Test]
         public void PlayerClicksMouseBehindPlayer()
         {
-            _localPlayer.Position = new Point(10, 10);
+            _localPlayer.Value.Position = new Point(10, 10);
 
             var x = 5 * TestTileWidth;
 
@@ -135,7 +135,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             var expectedY = 0;
 
-            _localPlayer.Position = new Point(10, 10);
+            _localPlayer.Value.Position = new Point(10, 10);
 
             PlayerInput.ProcessPlayerMouseInput(0, 0, TestScreenHeight, true);
 
@@ -147,7 +147,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             var expectedY = TestScreenHeight/TestTileHeight;
 
-            _localPlayer.Position = new Point(10, 10);
+            _localPlayer.Value.Position = new Point(10, 10);
 
             PlayerInput.ProcessPlayerMouseInput(0, 0, 0, true);
 
@@ -160,7 +160,7 @@ namespace HampageClientTests.FullAgentFunctions
             var expectedX = 0;
             var expectedY = TestScreenHeight / TestTileHeight;
 
-            _localPlayer.Position = new Point(10, 10);
+            _localPlayer.Value.Position = new Point(10, 10);
 
             PlayerInput.ProcessPlayerMouseMovement(0, 0);
 
@@ -174,9 +174,9 @@ namespace HampageClientTests.FullAgentFunctions
             var expectedX = TestScreenWidth / TestTileWidth;
             var expectedY = 0;
 
-            _localPlayer.Position = new Point(10, 10);
-            _localPlayer.LookTarget.X = -1;
-            _localPlayer.LookTarget.Y = -1;
+            _localPlayer.Value.Position = new Point(10, 10);
+            _localPlayer.Value.LookTarget.X = -1;
+            _localPlayer.Value.LookTarget.Y = -1;
 
             PlayerInput.ProcessPlayerMouseMovement(TestScreenWidth, TestScreenHeight);
 

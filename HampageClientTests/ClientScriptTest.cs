@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Threading;
+using NUnit.Framework;
 using DisruptoLib.Entities;
 using DisruptoLib.Factories;
 
@@ -6,7 +7,7 @@ namespace HampageClientTests
 {
     public class ClientScriptTest
     {
-        protected Character _localPlayer;
+        protected ThreadLocal<Character>  _localPlayer;
 
         [SetUp]
         public void ClientScriptSetUp()
@@ -15,7 +16,12 @@ namespace HampageClientTests
 
             CharacterFactory.AddPlayer();
 
-            _localPlayer = CharacterFactory.GetLocalPlayerCharacter();
+            _localPlayer = new ThreadLocal<Character>(() =>
+            {
+                return CharacterFactory.GetLocalPlayerCharacter();
+            });
+
+            // _localPlayer = CharacterFactory.GetLocalPlayerCharacter();
         }
     }
 }

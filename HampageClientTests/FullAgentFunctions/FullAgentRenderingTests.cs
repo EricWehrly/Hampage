@@ -56,7 +56,7 @@ namespace HampageClientTests.FullAgentFunctions
 
             const int expectedPlayerY = TestScreenHeight - ExpectedPlayerSpriteHeight;
 
-            _localPlayer.Position = new Point(0, 0);
+            _localPlayer.Value.Position = new Point(0, 0);
 
             CalculatePlayerRenderPosition();
 
@@ -70,7 +70,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerX = TestScreenWidth - ExpectedPlayerSpriteWidth;
 
-            _localPlayer.Position = new Point(TestTileXCount, 0);
+            _localPlayer.Value.Position = new Point(TestTileXCount, 0);
 
             CalculatePlayerRenderPosition();
 
@@ -82,7 +82,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerY = 0;
 
-            _localPlayer.Position = new Point(0, TestTileYCount);
+            _localPlayer.Value.Position = new Point(0, TestTileYCount);
 
             CalculatePlayerRenderPosition();
 
@@ -94,7 +94,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerX = TestScreenWidth;
 
-            _localPlayer.Position = new Point(TestTileXCount + 1, 0);
+            _localPlayer.Value.Position = new Point(TestTileXCount + 1, 0);
 
             CalculatePlayerRenderPosition();
 
@@ -106,7 +106,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerX = -(ExpectedPlayerSpriteWidth);
 
-            _localPlayer.Position = new Point(-1, 0);
+            _localPlayer.Value.Position = new Point(-1, 0);
 
             CalculatePlayerRenderPosition();
 
@@ -118,7 +118,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerX = -(10*ExpectedPlayerSpriteWidth);
 
-            _localPlayer.Position = new Point(-10, 0);
+            _localPlayer.Value.Position = new Point(-10, 0);
 
             CalculatePlayerRenderPosition();
 
@@ -131,7 +131,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerY = TestScreenHeight;
 
-            _localPlayer.Position = new Point(0, TestTileYCount + 1);
+            _localPlayer.Value.Position = new Point(0, TestTileYCount + 1);
 
             CalculatePlayerRenderPosition();
 
@@ -144,7 +144,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerY = -(ExpectedPlayerSpriteHeight);
 
-            _localPlayer.Position = new Point(0, -1);
+            _localPlayer.Value.Position = new Point(0, -1);
 
             CalculatePlayerRenderPosition();
 
@@ -157,7 +157,7 @@ namespace HampageClientTests.FullAgentFunctions
         {
             const int expectedPlayerY = -(10 * ExpectedPlayerSpriteHeight);
 
-            _localPlayer.Position = new Point(0, -10);
+            _localPlayer.Value.Position = new Point(0, -10);
 
             CalculatePlayerRenderPosition();
 
@@ -193,9 +193,9 @@ namespace HampageClientTests.FullAgentFunctions
         public void LocalPlayerAimsAtReticle()
         {
 
-            _localPlayer.Position = new Point(0, 0);
+            _localPlayer.Value.Position = new Point(0, 0);
 
-            _localPlayer.LookTarget = new Point(1, 1);
+            _localPlayer.Value.LookTarget = new Point(1, 1);
 
             var expectedX = 10;
             var expectedY = 10;
