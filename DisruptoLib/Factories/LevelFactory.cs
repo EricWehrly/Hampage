@@ -2,7 +2,7 @@
 
 namespace DisruptoLib.Factories
 {
-    class LevelFactory
+    public class LevelFactory
     {
         private static Level _currentLevel;
 
