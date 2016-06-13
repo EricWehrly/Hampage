@@ -55,7 +55,9 @@
       <Name>DisruptoLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\jquery-1.8.2.min.js" />
     <Content Include="scripts\jsclr.min.js" />
@@ -66,7 +68,9 @@
     <PostBuildEvent>if not exist "$(SolutionDir)Hamepage\$(OutDir)scripts" mkdir "$(SolutionDir)Hamepage\$(OutDir)scripts"
 xcopy /Y "$(ProjectDir)\scripts" "$(SolutionDir)Hamepage\$(OutDir)scripts"
 xcopy /Y "$(ProjectDir)res\CoOpTDClient.js" "$(SolutionDir)Hamepage\$(OutDir)scripts"
-xcopy /Y "$(ProjectDir)..\DisruptoLib\res\DisruptoLib.js" "$(SolutionDir)Hamepage\$(OutDir)scripts"</PostBuildEvent>
+xcopy /Y "$(ProjectDir)..\DisruptoLib\res\DisruptoLib.js" "$(SolutionDir)Hamepage\$(OutDir)scripts"
+if not exist "$(SolutionDir)Hamepage\$(OutDir)images" mkdir "$(SolutionDir)Hamepage\$(OutDir)images"
+xcopy /Y "$(ProjectDir)\images" "$(SolutionDir)Hamepage\$(OutDir)images"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

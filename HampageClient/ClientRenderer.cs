@@ -44,8 +44,8 @@ namespace HampageClient
             WindowRenderSize = new Rectangle(0, 0, HtmlContext.window.innerWidth, HtmlContext.window.innerHeight);
 
             _playerImage = new HtmlImageElement();
-            // _playerImage.src = "res/Square.gif";
-            //HtmlContext.document.body.appendChild(_playerImage);
+             _playerImage.src = "images/orc.png";
+            HtmlContext.document.body.appendChild(_playerImage);
 
             _characterRenderers = new List<CanvasCharacterRenderer>();
 
