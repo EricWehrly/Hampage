@@ -17,14 +17,14 @@ namespace Hampage.Requests
         {
             var newPlayer = CharacterFactory.AddPlayer();
 
-            var returnVal = new ConnectPacket
+            var connectPacket = new ConnectPacket
             {
                 SessionId = newPlayer,
                 CharacterId = CharacterFactory.GetPlayerCharacter(newPlayer).Id
             };
 
             //return JsonConvert.SerializeObject(new Tuple<Guid, Character[]>(newPlayer, GameData.Players));
-            var jsonBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(returnVal));
+            var jsonBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(connectPacket));
 
             var returnResponse = new Response();
 

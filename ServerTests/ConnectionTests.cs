@@ -21,10 +21,12 @@ namespace ServerTests
         {
             var browser = new Browser(with => with.Module<Index>());
             
-            var result = browser.Get("/", with => with.HttpRequest());
-            
-            result.Body.AsString().Should().Contain("<script");
+            var response = browser.Get("/", with => with.HttpRequest());
+
+            response.Body.AsString().Should().Contain("<script");
         }
+
+        // TODO: Test initial connect
 
         [Test]
         public void ConnectingClientsGetEmptyPlayerListWhenAlone()
@@ -33,9 +35,9 @@ namespace ServerTests
 
             var browser = new Browser(with => with.Module<GetPlayerList>());
 
-            var result = browser.Get("/GetPlayerList", with => with.HttpRequest());
+            var response = browser.Get("/GetPlayerList", with => with.HttpRequest());
 
-            var decodedResult = JsonConvert.DeserializeObject<Character[]>(result.Body.AsString());
+            var decodedResult = JsonConvert.DeserializeObject<Character[]>(response.Body.AsString());
 
             decodedResult.Length.Should().Be(1);
         }
@@ -63,9 +65,9 @@ namespace ServerTests
 
             var browser = new Browser(with => with.Module<GetPlayerList>());
 
-            var result = browser.Get("/GetPlayerList", with => with.HttpRequest());
+            var response = browser.Get("/GetPlayerList", with => with.HttpRequest());
 
-            var decodedResult = JsonConvert.DeserializeObject<Character[]>(result.Body.AsString());
+            var decodedResult = JsonConvert.DeserializeObject<Character[]>(response.Body.AsString());
 
             decodedResult.Length.Should().Be(initialPlayerCount + 1);
         }
