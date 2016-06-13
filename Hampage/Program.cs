@@ -29,6 +29,8 @@ namespace Hampage
 #if DEBUG
                 Process.Start(nancyUri);
 #endif
+                // Generate starter level
+
                 while (!_shutDownIssued)
                 {
                     Thread.Sleep(60000);

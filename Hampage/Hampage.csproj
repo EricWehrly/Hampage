@@ -58,6 +58,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\CreateProjectile.cs" />
+    <Compile Include="Requests\GetCurrentLevel.cs" />
     <Compile Include="Requests\GetPlayerList.cs" />
     <Compile Include="Requests\Index.cs" />
     <Compile Include="Requests\InitialConnect.cs" />
