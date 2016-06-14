@@ -63,6 +63,7 @@
     <Compile Include="Requests\Index.cs" />
     <Compile Include="Requests\InitialConnect.cs" />
     <Compile Include="Requests\RebuildServer.cs" />
+    <Compile Include="Requests\Images.cs" />
     <Compile Include="Requests\Scripts.cs" />
     <Compile Include="Requests\UpdateCharacter.cs" />
   </ItemGroup>
@@ -71,7 +72,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\index.html" />
+    <Content Include="Views\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DisruptoLib\DisruptoLib.csproj">
