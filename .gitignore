@@ -245,3 +245,4 @@ ModelManifest.xml
 .fake/
 /DisruptoLib/res
 /HampageClient/res
+HampageClient/scripts/HampageClient.js

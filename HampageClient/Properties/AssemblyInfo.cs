@@ -36,7 +36,7 @@ using SharpKit.JavaScript;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: JsMergedFile(Filename = "res/HampageClient.js", Sources = new[]
+[assembly: JsMergedFile(Filename = "scripts/HampageClient.js", Sources = new[]
 {
    "res/Network.js",
    "res/Client.js",
