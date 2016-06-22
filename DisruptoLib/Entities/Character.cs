@@ -1,4 +1,5 @@
 ﻿using System;
+using DisruptoLib.Animation;
 using DisruptoLib.Factories;
 using SharpKit.JavaScript;
 
@@ -23,6 +24,8 @@ namespace DisruptoLib.Entities
 
         public int Height { get; set; }
 
+        public Sprite Sprite { get; set; }
+
         public Character()
         {
             Position = new Point(0, 0);
@@ -36,6 +39,8 @@ namespace DisruptoLib.Entities
             Width = 1;
 
             Height = 1;
+
+            Sprite = new Sprite();
 
             Id = Guid.Empty;
         }

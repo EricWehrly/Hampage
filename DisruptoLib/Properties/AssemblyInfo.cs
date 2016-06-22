@@ -39,6 +39,7 @@ using SharpKit.JavaScript;
 [assembly: JsMergedFile(Filename = "res/DisruptoLib.js", Sources = new[]
 {
    "res/Lib.js",
+   "res/Animation.js",
    "res/Entities.js",
    "res/Factories.js",
 })]

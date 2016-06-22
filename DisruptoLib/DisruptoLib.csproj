@@ -40,6 +40,9 @@
     <Reference Include="SharpKit.JavaScript" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\AnimationFrame.cs" />
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\Sprite.cs" />
     <Compile Include="Entities\Character.cs" />
     <Compile Include="Entities\Level.cs" />
     <Compile Include="Factories\CharacterFactory.cs" />
