@@ -1,0 +1,86 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sprite Tool</title>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <style>
+        * {
+            background-color: #333;
+            color: white;
+            padding: 2px;
+            margin: 0;
+        }
+        input, select {
+            margin-right: 12px;
+        }
+        div {
+            display: inline-block;
+            padding: 0px;
+            margin: 0px;
+        }
+        #controlArea {
+            top: 0px;
+            border: 1px dotted black;
+            padding: 4px;
+            vertical-align: top;
+
+            /* TODO: Fix this */
+            width: 800px;
+        }
+        #animationFrameArea {
+            margin-top: 8px;
+            min-width: 400px;
+            min-height: 100px;
+            background-repeat: no-repeat;
+            background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='400px'><text x='0' y='15' fill='white' font-size='20'>Click and drag in the left area to create a frame</text></svg>");
+        }
+        .animationFrame {
+            background-repeat: no-repeat;
+        }
+
+        /* TODO: fix this */
+        #canvasArea {
+            width: 800px;
+            height: 600px;
+
+            border: 1px dashed blue;
+            background-repeat: no-repeat;
+        }
+        #canvasArea.hover { border: 10px dashed #0c0 !important; }
+        #canvasSelector {
+            display: none;
+            border: 1px solid red;
+            background: transparent;
+            position: absolute;
+            z-index: 9;
+        }
+    </style>
+</head>
+
+<body>
+<div id="content">
+    <div id="canvasArea"></div>
+    <div id="controlArea">
+        <label for="spriteName">Sprite</label>
+        <input id="spriteName" type="text" value="Change Me"/>
+        <label for="animationName">Animation</label>
+        <select id="animationName">
+            <option value="WalkLeft">WalkLeft</option>
+            <option value="WalkRight">WalkRight</option>
+            <option value="WalkUp">WalkUp</option>
+            <option value="WalkDown">WalkDown</option>
+        </select>
+        <input type="button" value="Save" onclick="saveSprite()"/>
+        <br/>
+        <label for="lockAnimationFrameSize">Lock animation frame size</label>
+        <input id="lockAnimationFrameSize" type="checkbox" checked="checked"/>
+        <br/>
+        <div id="animationFrameArea"></div>
+    </div>
+
+    <div id="canvasSelector"></div>
+</div>
+
+    <script type="text/javascript" src="../scripts/spriteTool.js"></script>
+</body>
+</html>
