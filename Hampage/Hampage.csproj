@@ -72,9 +72,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="scripts\spriteTool.js" />
     <Content Include="Views\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\spriteTool.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DisruptoLib\DisruptoLib.csproj">
